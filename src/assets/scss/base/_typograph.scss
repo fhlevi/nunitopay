@@ -1,0 +1,80 @@
+@each $name, $value in $font-weights-list{
+    .font-#{$name}{
+        font-weight: $value;
+    }
+}
+
+@for $font-size from 1 through 50{
+    .text-#{$font-size}{
+        font-size: REM($font-size);
+    }
+}
+
+.nunito-font{
+    font-family: 'Nunito', sans-serif;
+}
+
+@for $i from 1 through 20 {
+    .ellipsis-text-#{$i} {
+        @include ellipsis($i);
+    }
+}
+
+.ellipsis-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.overflow-text-x {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.font-ubuntu{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.font-opensans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu-color{
+    color: #2E434D;
+}
+
+@each $colorName, $color in $map-base-colors-text{
+    .text-bg-#{$colorName}{
+        color: $color;
+    }
+}
+
+// link style
+$map-link-color: (
+    red: #CA0D00,
+    lightgrey: #999,
+    default: #555,
+    'nunito-default': #003569
+);
+
+@each $name, $color in $map-link-color{
+    .n-link{
+        cursor: pointer;
+        &.link-#{$name}{
+            color: $color;
+            &:hover{
+                color: $color;
+                text-decoration: underline;
+            }
+            &.no-underline{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@each $colorName, $color in $map-base-colors-text{
+    .text-#{$colorName}{
+        color: $color;
+    }
+}

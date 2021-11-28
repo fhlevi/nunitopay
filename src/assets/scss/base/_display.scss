@@ -1,0 +1,76 @@
+%flex {
+    display: flex;
+}
+
+%align-center{
+    @extend %flex;
+    align-items: center;
+}
+
+%justify-center{
+    @extend %flex;
+    justify-content: center;
+}
+
+.el-center-on-start{
+    @extend %align-center;
+    justify-content: flex-start;
+    
+    &.flex-col{
+        @extend %justify-center;
+        align-items: start;
+    }
+}
+
+.el-center-on-end{
+    @extend %align-center;
+    justify-content: flex-end;
+}
+
+.el-center{
+    @extend %align-center;
+    justify-content: center;
+}
+
+.el-center-between{
+    @extend %align-center;
+    justify-content: space-between;
+}
+
+.el-center-around{
+    @extend %align-center;
+    justify-content: space-around;
+}
+
+// margin
+@for $margin from 1 through 50{
+    .ma-#{$margin} {
+        margin: PX($margin);
+    }
+
+    .my-#{$margin} {
+        margin-top: PX($margin);
+        margin-bottom: PX($margin);
+    }
+
+    .mx-#{$margin} {
+        margin-right: PX($margin);
+        margin-left: PX($margin);
+    }    
+
+    .mr-#{$margin} {
+        margin-right: PX($margin);
+    }
+
+    .ml-#{$margin} {
+        margin-left: PX($margin);
+    }
+    
+    .mb-#{$margin} {
+        margin-bottom: PX($margin);
+    }
+
+    .mt-#{$margin} {
+        margin-top: PX($margin);
+    }
+}

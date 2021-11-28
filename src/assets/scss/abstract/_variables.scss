@@ -1,0 +1,44 @@
+@import 'variables/colors';
+$primary-color: #CA0D00;
+$white-colors: #ffffff;
+$secondary-color: #808C92;
+$black: #2E434D;
+
+$map-colors:(
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'white': $white-colors,
+    'black': $black
+);
+
+$font-weights-list: (
+    'thin': 100,
+    'light': 200,
+    'book': 300,
+    'regular': 400,
+    'medium': 500,
+    'semibold': 600,
+    'bold': 700,
+    'heavy-bold': 800
+);
+
+$snackbar-colors: (
+    'danger': linear-gradient(92.99deg, #E63958 31.85%, #FD4163 94.49%),
+    'success': linear-gradient(135deg, #1F8B41 0%, #65C285 100%),
+    'warning': linear-gradient(143.93deg, #F78217 0%, #FFAF65 100%),
+    'dark': linear-gradient(89.45deg, #424349 31.76%, #5B5D66 96.06%)
+);
+
+$btn-color-list: (
+    red: (
+        color: #CA0D00,
+        text: #FFFFFF,
+    )
+);
+
+$snackbar-colors: (
+    'danger': linear-gradient(92.99deg, #E63958 31.85%, #FD4163 94.49%),
+    'success': linear-gradient(135deg, #1F8B41 0%, #65C285 100%),
+    'warning': linear-gradient(143.93deg, #F78217 0%, #FFAF65 100%),
+    'dark': linear-gradient(89.45deg, #424349 31.76%, #5B5D66 96.06%)
+);

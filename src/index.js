@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './assets/scss/main.scss';
 import App from './App';
+import MetaHeader from 'components/navigation/MetaHeader';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <MetaHeader />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

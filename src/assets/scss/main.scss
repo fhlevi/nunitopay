@@ -1,0 +1,42 @@
+@import 'abstract/init';
+@import 'base/init';
+@import 'components/init';
+@import 'pages/init';
+
+html {
+    height: 100%;
+    overflow-y: auto !important;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif !important;
+
+    &, &::before, &::after {
+        box-sizing: border-box;
+    }
+}
+
+.container {
+    padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0) !important;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px !important;
+    justify-content: center;
+    height: 100vh;
+    
+    &.sooltan-backbground {
+        background-color: #DEE3ED !important;
+    }
+}
+
+.section-background {
+    background-color: #edf0f2 !important;
+}
+  

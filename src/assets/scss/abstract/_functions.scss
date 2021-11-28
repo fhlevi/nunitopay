@@ -1,0 +1,13 @@
+@function REM($size){
+    $UNIT-OF-REM: 16;
+
+    $rem-size: ($size / $UNIT-OF-REM) + rem;
+
+    @return $rem-size;
+}
+
+@function PX($size) {
+    $px-size: $size + px;
+
+    @return $px-size;
+}

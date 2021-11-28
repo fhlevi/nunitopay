@@ -1,0 +1,86 @@
+.header-navigation {
+    background: #FFFFFF !important;
+    
+    &.shadow {
+        box-shadow: 0px 5px 5px #2e434d1a;
+    }
+
+    &.no-shadow {
+        box-shadow: unset;
+    }
+    
+    .title-header {
+        color: #000000DE;
+        font-weight: 500;
+    }
+
+    .header-icons {
+        width: 20px;
+        height: 20px;
+         
+        &.arrow-back {
+            background: url('~assets/images/icons/navigation/arrow-back.svg') no-repeat center / contain;
+        }
+    }
+}
+
+$nav-icon: (
+    'beranda': 'Home.svg',
+    'product': 'Product Setting.svg',
+    'transaction': 'Note.svg',
+    'login': 'Login.svg',
+    'profile': 'Person.svg'
+);
+
+.bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $primary-white;
+    border-top: 1px solid $border-input;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 500px;
+
+    .qr-scanner {
+        background: #CA0D00;
+        width: 48px;
+        height: 48px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15), 0px 0px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        padding: 10px 12px;
+        position: absolute;
+        top: -27px;
+    }  
+
+    .qr-scanner-text {
+        top: 10px;
+        position: relative; 
+    }
+
+    .bottom-item-navigation {
+        padding-top: 9px;
+        padding-bottom: 3px;
+        color: $text-inactive;
+
+        &.active {
+            margin: 0px auto;
+            border-top: 2px solid #003569;
+            color: #003569 !important;
+        }
+
+        @each $var, $val in $nav-icon {
+            .nav-icon-#{$var} {
+                width: 24px;
+                height: 24px;
+                background: url('~assets/images/icons/navigation/bottom/' + #{$val}) no-repeat center / contain;
+                
+                &.active {
+                    background: #003569;
+                    mask: url('~assets/images/icons/navigation/bottom/'  + #{$val}) no-repeat center / contain;
+                    -webkit-mask: url('~assets/images/icons/navigation/bottom/'  + #{$val}) no-repeat center / contain;
+                }
+            }
+        }
+    }
+}

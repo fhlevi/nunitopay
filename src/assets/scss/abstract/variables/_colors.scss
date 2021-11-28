@@ -1,0 +1,130 @@
+// Base Color
+$primary-red: #CA0D00;
+$primary-white: #FDFDFD;
+$secondary-indigo: #3455AA;
+$secondary-yellow: #FFC400;
+$secondary-green: #25974C;
+$secondary-gray: #808C92;
+
+
+$map-base-colors:(
+    'primary-red': $primary-red,
+    'primary-white': $primary-white,
+    'secondary-indigo': $secondary-indigo,
+    'secondary-yellow': $secondary-yellow,
+    'secondary-green': $secondary-green,
+    'secondary-gray': $secondary-gray
+);
+
+// Text Color
+$midnight: #2E434D;
+$primary: #E21D0F;
+$text-inactive: #808C92;
+$placeholder: #ADADAD;
+$error: #FF483B;
+$red-button: #C72037;
+$black-icon: #000000;
+$gray-2: #4F4F4F;
+
+$map-base-colors-text:(
+    'midnight': $midnight,
+    'primary': $primary,
+    'inactive': $text-inactive,
+    'placeholder': $placeholder,
+    'white': $primary-white,
+    'error': $error,
+    'button-primary': $red-button,
+    'primary-red':  $primary-red,
+    'icon-black': $black-icon,
+    'gray': $gray-2,
+    'green': $secondary-green
+);
+
+
+// Background
+$bg-inactive: #EDF0F2;
+$blackout: #2E434D, 50%;
+
+$map-background-colors:(
+    'white': $primary-white,
+    'inactive': $bg-inactive,
+    'blackout': $blackout
+);
+
+// Border
+$border-input: #DEE3ED;
+$border-card: #F1F3F7;
+
+// Gradient
+$gradient-red: linear-gradient(87.74deg, #E63958 -0.44%, #E21D0F -0.43%, #FF5F54 96.2%);
+$gradient-green: linear-gradient(135deg, #1F8B41 0%, #65C285 100%);
+$gradient-blue: linear-gradient(135deg, #224397 0%, #476AC2 100%);
+$gradient-yellow: linear-gradient(143.93deg, #F78217 0%, #FFAF65 100%);
+$gradient-gray: linear-gradient(89.45deg, #424349 31.76%, #5B5D66 96.06%);
+
+$map-gradient-colors:(
+    'red': $gradient-red,
+    'green': $gradient-green,
+    'blue': $gradient-blue,
+    'yellow': $gradient-yellow,
+    'gray': $gradient-gray
+);
+
+// Shades
+
+// Red
+$red-40: #820800;
+$red-30: #900900;
+$red-20: #AD0B00;
+$red-0: #E21D0F;
+$red--10: #EE3124;
+$red--20:#FF483C;
+$red--30: #FF675C;
+$red--40: #FF928A;
+$red--50: #FFBEB9,;
+$red--60: #FFE8E7;
+
+// Indigo
+$indigo-20: #133386;
+$indigo-10: #224397;
+$indigo-0: #3455AA;
+$indigo--10: #476AC2;
+$indigo--20: #6081D7;
+$indigo--30: #7C9BEC;
+$indigo--40: #A7BFFF;
+
+// Green
+$green-20: #157631;
+$green-10: #1F8B41;
+$green-0: #25974C;
+$green--10: #50AB6F;
+$green--20: #8FC8A3;
+$green--30: #BADCC6;
+$green--40: #E5F0E9;
+
+// Yellow
+$yellow-20: #FFAD00;
+$yellow-10: #FFBB00;
+$yellow-0: #FFC400;
+$yellow--10: #FECF32;
+$yellow--20: #FDDF7D;
+$yellow--30: #FCEDBE;
+$yellow--40: #FBF5E1;
+
+// Gray
+$gray-20: #5A666D;
+$gray-10: #737F85;
+$gray-0: #808C92;
+$gray--10: #98A2A7;
+$gray--20: #B1B8BC;
+$gray--30: #C9CED0;
+$gray--40: #E2E4E5;
+
+$transparent: rgba(0, 0, 0, 0);
+
+$snackbar-colors: (
+    'danger': linear-gradient(92.99deg, #E63958 31.85%, #FD4163 94.49%),
+    'success': linear-gradient(135deg, #1F8B41 0%, #65C285 100%),
+    'warning': linear-gradient(143.93deg, #F78217 0%, #FFAF65 100%),
+    'dark': linear-gradient(89.45deg, #424349 31.76%, #5B5D66 96.06%)
+);

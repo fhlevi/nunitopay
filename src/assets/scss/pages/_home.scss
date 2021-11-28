@@ -1,0 +1,104 @@
+.home-header{
+    background-color: #003569 !important;
+    // background-image: url('../../images/banner/struk_banner.svg');
+    // background-size: 105%;
+    border-radius: unset;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    min-height: 240px;
+    height: auto;
+}
+
+.space-banner {
+   height: 89px; 
+}
+
+.top-header{
+    padding: 15px;
+    height: 89px;
+    background-color: #003569 !important;
+    // background-image: url('../../images/banner/struk_banner.svg');
+    // background-size: 105%;
+    background-repeat: no-repeat;
+    top: 0px;
+    width: 100%;
+    position: fixed;
+    z-index: 40;
+    max-width: 500px;
+
+    
+    .logo-sooltan{
+        width: 131px;
+        height: 55px;
+    }
+} 
+
+.home-height {
+    min-height: 150vh;
+}
+
+.sub-header{
+    padding: 15px;
+
+    .wallet-panel{
+        position: relative;
+        border-radius: 8px;
+        background-color: #FDFDFD;
+        width: 100%;
+        height: 100%;
+        padding: 12px 16px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+
+        .top-card{
+            height: 83px;
+        }
+
+        .wd-info{
+            background-color: #F1F3F7;
+            border-bottom-left-radius: 8px !important;
+            border-bottom-right-radius: 8px !important;
+            min-height: 32px;
+            border-top: 1px solid #DEE3ED;
+        }
+
+        .wallet-item{
+            text-align: center;
+            align-items: center;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    .space-between {
+        width: 5%;
+    }
+}
+
+.main-content{
+    overflow-y: auto;
+    height: calc(100vh - 56px);
+}
+
+.home-wrapper {
+    background-color: $bg-inactive;
+
+    .item__card {
+        height: 46px;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+        font-size: 12px;
+        
+        .item__card-content {
+            display: flex;
+            align-items: center;
+            padding: 0px;
+            height: 46px;
+            padding: 13px;
+        }
+    }
+}

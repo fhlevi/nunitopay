@@ -1,0 +1,74 @@
+/**
+ * Typograph
+ */
+@mixin font($size, $weight: 400){
+    font-size: $size !important;
+    font-weight: $weight;
+}
+
+@mixin ellipsis($clamp) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $clamp;
+    overflow: hidden;
+}
+
+
+/** 
+ * Position Helper
+ */
+@mixin padding-horizontal($size){
+    padding-left: $size;
+    padding-right: $size;
+}
+
+@mixin padding-vertical($size){
+    padding-top: $size;
+    padding-bottom: $size;
+}
+
+@mixin margin-horizontal($size){
+    margin-left: $size;
+    margin-right: $size;
+}
+
+@mixin margin-vertical($size){
+    margin-top: $size;
+    margin-bottom: $size;
+}
+
+@mixin set-dimension($height, $width){
+    width: $width;
+    height: $height;
+}
+
+@mixin background-color($bgColor, $textColor: $primary-white, $important: 'false'){
+    @if($important == 'true'){
+        background-color: $bgColor !important;
+        color: $textColor !important;
+    }@else{
+        background-color: $bgColor;
+        color: $textColor;
+    }
+
+}
+
+@mixin needed($props) {
+    @if type-of($props) == map {
+        @each $prop, $val in $props {
+            #{$prop}: $val !important;
+        }
+    } @else {
+        @error "type of parameter must be map";
+    }
+}
+
+@mixin need($props) {
+    @if type-of($props) == map {
+        @each $prop, $val in $props {
+            #{$prop}: $val !important;
+        }
+    } @else {
+        @error "type of parameter must be map";
+    }
+}
