@@ -1,4 +1,7 @@
 import React from 'react';
+import { useSelector, useDispatch  } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
 import ApiCategory from 'api/Category';
 import TopHeader from "./partials/TopHeader";
 import { Card, CardContent, Grid } from '@mui/material';
@@ -6,16 +9,16 @@ import QrLogo from 'assets/images/icons/home/qr.svg';
 import ProductLogo from 'assets/images/icons/home/store.svg';
 import styled from 'styled-components';
 import { unstable_styleFunctionSx } from '@mui/system';
-import { useHistory } from 'react-router-dom';
 
 const DIV = styled('div')(unstable_styleFunctionSx)
 
 
 function HomeScreen () {
-    let history = useHistory()
+    const history = useHistory()
+    const dispatch = useDispatch()
     const [listCategory, setListCategory] = React.useState([])
     const [productModel, setProductModel] = React.useState(null)
-    const [navigationList, setNavigationList] = React.useState([])
+    const navigationList = useSelector(state => state.categoriesReduce.navigationList)
 
     const handleTo = () => {
         history.push('/login')
@@ -60,11 +63,11 @@ function HomeScreen () {
                 }
             });
     
-            setNavigationList(menuList)
+            dispatch({ type: 'set', navigationList: menuList })
         }
         
         mappingCategoryMenu(listCategory)
-    }, [listCategory])
+    }, [listCategory, dispatch])
 
     const getImagesMenu = (key) => {
         const imgName = key.toLowerCase().replace(/[ .]+/g, '-')

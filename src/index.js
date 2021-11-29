@@ -5,11 +5,15 @@ import App from './App';
 import 'config/mockServiceWorker';
 import MetaHeader from 'components/navigation/MetaHeader';
 import reportWebVitals from './reportWebVitals';
+import store from 'redux/store';
+import { Provider } from 'react-redux';
 
 ReactDOM.render(
   <React.StrictMode>
     <MetaHeader />
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
