@@ -1,0 +1,92 @@
+{
+    "data": [
+        {
+            "category": "Pembelian",
+            "listProduct": [
+              {
+                "id": 1,
+                "category": "Isi Pulsa",
+                "type": "TOPUP_PREPAID",
+                "img_url_v3": "https://s3-ap-southeast-1.amazonaws.com/snopy/product/9407311b-e338-479f-add8-6342d2d4b751.png",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 2,
+                "category": "Paket Data",
+                "type": "TOPUP_PREPAID",
+                "img_url_v3": "https://s3-ap-southeast-1.amazonaws.com/snopy/product/094a5db6-db77-446f-91bc-0f9ec8f90016.png",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 3,
+                "category": "Topup E-Money",
+                "type": "TOPUP_PREPAID",
+                "img_url_v3": "https://s3-ap-southeast-1.amazonaws.com/snopy/product/49160748-0f8d-4ee9-95e8-45e45c5049a8.png",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 4,
+                "category": "Token PLN",
+                "type": "TOPUP_PREPAID",
+                "img_url_v3": "https://s3-ap-southeast-1.amazonaws.com/snopy/product/49160748-0f8d-4ee9-95e8-45e45c5049a8.png",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 5,
+                "category": "Wifi.id",
+                "type": "TOPUP_PREPAID",
+                "img_url_v3": "https://s3-ap-southeast-1.amazonaws.com/snopy/product/8f754321-77d6-4138-997a-d605a8713739.png",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 6,
+                "category": "Voucher",
+                "type": "TOPUP_PREPAID",
+                "img_url_v3": "https://s3-ap-southeast-1.amazonaws.com/snopy/product/6f70663d-a622-4705-bb6e-a76b487a2340.png",
+                "status": "ACTIVE"
+              }
+            ]
+        },
+        {
+            "category": "Tagihan",
+            "listProduct": [
+              {
+                "id": 7,
+                "category": "Indihome",
+                "type": "BILL_PAYMENT",
+                "img_url_v3": "https://s3-ap-southeast-1.amazonaws.com/snopy/product/ce537213-8b80-4160-9da0-53edd3e88436.png",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 7,
+                "category": "sooltanNet",
+                "type": "BILL_PAYMENT",
+                "img_url_v3": "added by front_end",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 8,
+                "category": "PLN",
+                "type": "BILL_PAYMENT",
+                "img_url_v3": "https://s3-ap-southeast-1.amazonaws.com/snopy/product/c2cc5760-7dac-4ccb-91fb-1aa2deb354fd.png",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 9,
+                "category": "Pasca Bayar",
+                "type": "BILL_PAYMENT",
+                "img_url_v3": "https://s3-ap-southeast-1.amazonaws.com/snopy/product/2b77b652-9376-40b6-a32a-b77cedcfe20e.png",
+                "status": "ACTIVE"
+              }
+            ]
+        },
+        {
+            "category": "QR",
+            "listProduct": []
+        },
+        {
+            "category": "Tarik Setor Tunai",
+            "listProduct": []
+        }
+    ]
+}

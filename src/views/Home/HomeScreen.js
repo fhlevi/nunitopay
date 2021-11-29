@@ -1,3 +1,5 @@
+import React from 'react';
+import ApiCategory from 'api/Category';
 import TopHeader from "./partials/TopHeader";
 import { Card, CardContent, Grid } from '@mui/material';
 import QrLogo from 'assets/images/icons/home/qr.svg';
@@ -8,14 +10,66 @@ import { useHistory } from 'react-router-dom';
 
 const DIV = styled('div')(unstable_styleFunctionSx)
 
-const imageItem = require('assets/images/icons/online-payment/isi-pulsa.svg').default
-
 
 function HomeScreen () {
     let history = useHistory()
+    const [listCategory, setListCategory] = React.useState([])
+    const [productModel, setProductModel] = React.useState(null)
+    const [navigationList, setNavigationList] = React.useState([])
 
     const handleTo = () => {
         history.push('/login')
+    }
+
+    React.useEffect(() => {
+        const data = new ApiCategory()
+
+        setProductModel(data)
+    }, [])
+
+    React.useEffect(() => {
+        if(productModel) {
+            const getDataCategory = async () => {
+                try {
+                    const response = await productModel.getCategory()
+        
+                    setListCategory(response.data.data.data)
+                } catch (e) {
+                    console.error(e)
+                }
+            }
+            
+            getDataCategory()
+        }
+    }, [productModel])
+
+    React.useEffect(() => {
+        const mappingCategoryMenu = (menuCategory) =>{
+            let menuList = [];
+            const menuItem = [];
+    
+            menuCategory.forEach((item) => {
+                item.listProduct.forEach((itemf) => {
+                    if (itemf.status.toLowerCase() === "active") {
+                        menuItem.push(itemf);
+                    }
+                });
+                
+                if (item.listProduct.length) {
+                    menuList = menuItem;
+                }
+            });
+    
+            setNavigationList(menuList)
+        }
+        
+        mappingCategoryMenu(listCategory)
+    }, [listCategory])
+
+    const getImagesMenu = (key) => {
+        const imgName = key.toLowerCase().replace(/[ .]+/g, '-')
+
+        return require('assets/images/icons/online-payment/'+imgName+'.svg').default
     }
 
     return (
@@ -50,11 +104,11 @@ function HomeScreen () {
                     Top Up dan Tagihan
                 </DIV>
                 <Grid container item xs={12}>
-                    {Array.from(Array(10)).map((_, index) => (
+                    {navigationList.map((_, index) => (
                         <Grid item xs={3} p={2} key={index} textAlign="center">
-                            <img src={imageItem} alt="item-logo" />
+                            <img src={getImagesMenu(_.category)} alt="item-logo" />
                             <DIV className="text-12" sx={{ mt: 1 }}>
-                                Isi Pulsa
+                                {_.category}
                             </DIV>
                         </Grid>
                     ))}
