@@ -1,4 +1,4 @@
-# react_nunitopay
+# Project Vue
 
 ## Project setup
 ```
