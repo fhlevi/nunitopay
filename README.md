@@ -1,4 +1,4 @@
-# Project Vue
+# Project ReactJs
 
 ## Project setup
 ```
