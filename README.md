@@ -1,4 +1,4 @@
-# Project ReactJs
+# Nunitopay
 
 ## Project setup
 ```
